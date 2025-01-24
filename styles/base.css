@@ -208,7 +208,6 @@ form {
   margin: auto;
   border-collapse: collapse;
   border: none;
-  border-bottom: .11rem solid rgba(0, 0, 0, 0.668);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   justify-content: center;
@@ -351,45 +350,12 @@ select {
   color: #f7f8fa;
 }
 
-#boxes {
-  position: relative;
-  width: 250px;
-  height: 300px;
-  min-width: 175px;
-  min-height: 300px;
-  max-width: 500px;
-  max-height: 500px;
-}
-
 #greenBox, #redBox {
   display: flex;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-
-#greenBox {
-  /* background-color: green; */
-  /* width: 500px; */
-  /* height: 500px; */
-  z-index: -1;
-  max-width: 500px;
-  max-height: 500px;
-}
-
-#redBox {
-  /* background-color: white;
-  width: 0px;
-  height: 0px; */
-  z-index: 1;
-  max-width: 500px;
-  max-height: 500px;
-}
-
-/* #startYearBoxNumber,
-#endYearBoxNumber {
-  color: #f7f8fa;
-} */
 
 #key {
   display: grid;
