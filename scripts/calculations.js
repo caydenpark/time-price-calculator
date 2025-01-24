@@ -261,6 +261,7 @@ function performBasicCaculations() {
 
     // Percentage Change in the Time Price
     document.getElementById("timePricePercentageChangeBasic").innerHTML = timePricePercentageChangeBasic.toFixed(1)+"%";
+    document.getElementById("timePricePercentageChangeBasicSentence").innerHTML = timePricePercentageChangeBasic.toFixed(1)+"%";
 
     // Abundance Multiplier
     basicMultiplier = startTimePriceBasic / endTimePriceBasic;
@@ -332,6 +333,7 @@ function performCalculations() {
   }
   
   if (allInputFieldsNotEmpty()){
+      finishSentence();
       
       // Time Price
       var startTimePrice = startPrice / startComp
@@ -437,6 +439,29 @@ function performCalculations() {
     }
 }
 
+function finishSentence() {
+  var productBasic = document.getElementById('productBasic').value;
+  var startYearBasic = document.getElementById('startYearBasic').value;
+  var endYearBasic = document.getElementById('endYearBasic').value;
+
+  document.getElementById("productSentenceBasic").innerHTML = productBasic;
+  document.getElementById("startYearSentenceBasic").innerHTML = startYearBasic;
+  document.getElementById("endYearSentenceBasic").innerHTML = endYearBasic;
+
+  var startPriceBasic = document.getElementById('startPriceBasic').value;
+  var endPriceBasic = document.getElementById('endPriceBasic').value;
+  var startCompBasic = document.getElementById('startCompBasic').value;
+  var endCompBasic = document.getElementById('endCompBasic').value;
+
+  var startTimePriceBasic = startPriceBasic / startCompBasic
+  var endTimePriceBasic = endPriceBasic / endCompBasic
+  var multiplierBasic = startTimePriceBasic / endTimePriceBasic;
+  
+  document.getElementById("personalMultiplierBasic").innerHTML = multiplierBasic.toFixed(2);
+  document.getElementById("personalMultiplierBasic").classList.add('boldBlue');
+  document.getElementById("timePricePercentageChangeBasicSentence").style.fontWeight =  900;
+}
+
 function clearBasic() {
   var section = document.getElementById("basicCalc");
   // Get all the input fields within the specified section
@@ -449,6 +474,18 @@ function clearBasic() {
   document.getElementById("startTimePriceBasic").innerHTML = "----";
   document.getElementById("endTimePriceBasic").innerHTML = "----";
 
+  document.getElementById('timePricePercentageChange').innerHTML = '----';
+  document.getElementById('productSentenceBasic').innerHTML = '____';
+  document.getElementById('startYearSentenceBasic').innerHTML = '----';
+  document.getElementById('personalMultiplierBasic').innerHTML = '----';
+  document.getElementById('endYearSentenceBasic').innerHTML = '----';
+
+  document.getElementById('startTimePriceBasic').classList.remove('boldBlue');
+  document.getElementById('endTimePriceBasic').classList.remove('boldBlue');
+  document.getElementById('personalMultiplierBasic').classList.remove('boldBlue');
+  document.getElementById('timePricePercentageChangeBasicSentence').style.removeProperty('font-weight');
+
+  document.getElementById("timePricePercentageChangeBasicSentence").innerHTML = "---";
   document.getElementById("timePricePercentageChangeBasic").innerHTML = "---";
   document.getElementById("basicMultiplier").innerHTML = "---";
   document.getElementById("percentageChangeAbundance").innerHTML = "---";

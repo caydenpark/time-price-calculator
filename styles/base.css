@@ -119,6 +119,16 @@ button:hover {
   width: 50%;
 }
 
+#sentenceExplanation {
+  text-align: center !important;
+  border-top: 0.11rem solid rgba(0, 0, 0, 0.668);
+}
+
+.boldBlue {
+  color: #0e1e58;
+  font-weight: 900;
+}
+
 #basicCalc th,
 #basicCalc td {
   border-collapse: collapse;
