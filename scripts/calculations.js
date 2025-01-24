@@ -116,10 +116,6 @@ function getHourlyCompBasic(){
       startCompBasic = data.data[startYearBasic.value - 1800].usUnskilled;
       endCompBasic = data.data[endYearBasic.value - 1800].usBlueCollar;
       break;
-    case "U.K. Wage":
-      startCompBasic = data.data[startYearBasic.value - 1800].ukWage;
-      endCompBasic = data.data[endYearBasic.value - 1800].ukWage;
-      break;
   }
   
   document.getElementById("startCompBasic").value = startCompBasic.toFixed(2).toString();
@@ -149,10 +145,6 @@ function getHourlyComp(){
       case "U.S. Upskilling":
         startComp = data.data[startYear.value - 1800].usUnskilled;
         endComp = data.data[endYear.value - 1800].usBlueCollar;
-        break;
-      case "U.K. Wage":
-        startComp = data.data[startYear.value - 1800].ukWage;
-        endComp = data.data[endYear.value - 1800].ukWage;
         break;
     }
     
