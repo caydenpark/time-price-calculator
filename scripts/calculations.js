@@ -40,7 +40,7 @@ function toggleCalculatorState() {
     basicClearButton.classList.add("hidden");
 
     title.innerText = "Abundance Calculator";
-    document.querySelector("form").style.minWidth = "900px";
+    document.querySelector("form").style.minWidth = "500px";
   }
   synchronizeValues();
   performBasicCaculations();

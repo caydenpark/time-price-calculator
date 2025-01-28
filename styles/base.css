@@ -108,7 +108,6 @@ button:hover {
 
 #basicCalc {
   font-family: Proxima N;
-  padding-bottom: 25px;
   display: grid;
   justify-content: center;
   width: 100%;
@@ -180,11 +179,11 @@ form {
   background-color: #f7f8fa;
   border: 0.11rem solid rgba(0, 0, 0, 0.27);
   border-radius: 25px;
-  min-width: 900px;
+  min-width: 700px;
   max-width: 1000px;
 }
 
-#dashboard {
+/* #dashboard {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -193,7 +192,7 @@ form {
   border-collapse: collapse;
   padding-bottom: 10px;
   padding-top: 10px;
-}
+} */
 
 #dashboard td {
   border: 1px solid rgba(0, 0, 0, 0.668);
@@ -417,10 +416,20 @@ select {
   font-weight: 550;
 }
 
+#resultSection {
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center;
+  gap: 1rem; /* Adds spacing between the elements */
+  padding: 25px 0px;
+}
+
 #resultButtons {
-  margin-bottom: 20px;
-  margin-right: 20px;
-  text-align: right;
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center;
+  flex-direction: column; /* Keeps buttons stacked vertically */
+  gap: 1rem;
 }
 
 #print {
@@ -431,5 +440,9 @@ select {
 #bookCover {
   width: 100px;
   height: auto;
-  border: 8px solid white;
+  border: 6px solid #e0bd53;
+}
+
+#bookCover:hover {
+  border: 6px solid #5a2b0c;
 }
