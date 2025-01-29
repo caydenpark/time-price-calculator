@@ -28,19 +28,19 @@ function toggleCalculatorState() {
   if (basicRadio.checked) {
     basicCalc.classList.remove("hidden");
     advancedCalc.classList.add("hidden");
-    basicClearButton.classList.remove("hidden");
-    advancedClearButton.classList.add("hidden");
+    // basicClearButton.classList.remove("hidden");
+    // advancedClearButton.classList.add("hidden");
 
     title.innerText = "Time Price Calculator";
-    document.querySelector("form").style.minWidth = "500px";
+    document.querySelector("form").style.minWidth = "550px";
   } else if (advancedRadio.checked) {
     advancedCalc.classList.remove("hidden");
     basicCalc.classList.add("hidden");
-    advancedClearButton.classList.remove("hidden");
-    basicClearButton.classList.add("hidden");
+    // advancedClearButton.classList.remove("hidden");
+    // basicClearButton.classList.add("hidden");
 
     title.innerText = "Abundance Calculator";
-    document.querySelector("form").style.minWidth = "500px";
+    document.querySelector("form").style.minWidth = "650px";
   }
   synchronizeValues();
   performBasicCaculations();

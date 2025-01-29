@@ -107,13 +107,6 @@
               <td id="startTimePriceBasic" class="calculations">----</td>
               <td id="endTimePriceBasic" class="calculations">----</td>
             </tr>
-            <tr>
-              <td id="sentenceExplanation" colspan="4">
-                  The time price has fallen by <span id="timePricePercentageChangeBasicSentence">----</span> percent. <br>
-                  For the time required to earn one <span id="productSentenceBasic">____</span> <br>
-                  in <span id="startYearSentenceBasic">----</span> you get <span id="personalMultiplierBasic">----</span> in <span id="endYearSentenceBasic">----</span>
-              </td>
-          </tr>
         </table>
         <table id="basicCalcChanges">
           <tr>
@@ -137,6 +130,24 @@
             <td id="basicDoubleYears">---</td>
           </tr>
         </table>
+        <section>
+          <div id="resultSection">
+            <div id="sentenceExplanation" colspan="4">
+              The time price has fallen by <br> <span id="timePricePercentageChangeBasicSentence">----</span> percent. <br>
+              <br> For the time required to earn <br> the money to buy one <span id="productSentenceBasic">____</span> <br>
+              in <span id="startYearSentenceBasic">----</span> you get <br> <span id="personalMultiplierBasic">----</span> in <span id="endYearSentenceBasic">----</span>
+            </div>
+            <div id="resultButtonsBasic">
+              <button type="button" id="clearBasic">Clear</button>
+              <!-- <button type="button" id="clearAdvanced" class="hidden">Clear</button> -->
+              <button type="button" id="print" onclick="window.print()">Print</button>
+              <!-- <button type="button" id="jpeg" onclick="window.generateJPEG()">Create JPEG</button> -->
+            </div>
+            <a href="https://www.superabundance.com/" target="_blank" rel="noopener noreferrer">
+              <img id="bookCoverBasic" src="images/book-cover.jpg" alt="Superabundance Link">
+            </a>
+          </div>
+        </section>
       </section>
       <section id="advancedCalc" class="hidden">
         <table id="table1">
@@ -279,8 +290,14 @@
               <td></td>
               <th class="levels">Personal<br>Level</th>
               <th class="levels">Population<br>Level</th>
-              <td></td>
-              <td></td>
+              <td rowspan="2">
+                <button type="button" id="clearAdvanced">Clear</button>
+              </td>
+              <td rowspan="4">
+                <a href="https://www.superabundance.com/" target="_blank" rel="noopener noreferrer">
+                  <img id="bookCoverAdvanced" src="images/book-cover.jpg" alt="Superabundance Link">
+                </a>
+              </td>
             </tr>
             <tr>
               <td class="tooltip">
@@ -303,7 +320,9 @@
               </td>
               <td id="personalDoubleYears" class="calculations">----</td>
               <td id="populationDoubleYears" class="calculations">----</td>
-              <td></td>
+              <td rowspan="2">
+                <button type="button" id="print" onclick="window.print()">Print</button>
+              </td>
               <td></td>
             </tr>
             <tr>
@@ -314,22 +333,11 @@
               </td>
               <td id="personalElasticity" class="calculations">----</td>
               <td id="populationElasticity" class="calculations">----</td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
-      </section>
-      <section>
-        <div id="resultSection">
-          <a href="https://www.superabundance.com/" target="_blank" rel="noopener noreferrer">
-            <img id="bookCover" src="images/book-cover.jpg" alt="Superabundance Link">
-          </a>
-          <div id="resultButtons">
-            <button type="button" id="clearBasic">Clear</button>
-            <button type="button" id="clearAdvanced" class="hidden">Clear</button>
-            <button type="button" id="print" onclick="window.print()">Print</button>
-            <!-- <button type="button" id="jpeg" onclick="window.generateJPEG()">Create JPEG</button> -->
-          </div>
-        </div>
       </section>
     </form>
   </main>
