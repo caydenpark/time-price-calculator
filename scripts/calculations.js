@@ -32,14 +32,14 @@ function toggleCalculatorState() {
     // advancedClearButton.classList.add("hidden");
 
     title.innerText = "Time Price Calculator";
-    document.querySelector("form").style.minWidth = "550px";
+    document.querySelector("form").style.width = "550px";
   } else if (advancedRadio.checked) {
     advancedCalc.classList.remove("hidden");
     basicCalc.classList.add("hidden");
     // advancedClearButton.classList.remove("hidden");
     // basicClearButton.classList.add("hidden");
 
-    document.querySelector("form").style.minWidth = "650px";
+    document.querySelector("form").style.width = "700px";
   }
   synchronizeValues();
   performBasicCaculations();

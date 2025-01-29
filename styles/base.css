@@ -118,11 +118,6 @@ button:hover {
   width: 50%;
 }
 
-#sentenceExplanation {
-  /* text-align: center !important; */
-
-}
-
 .boldBlue {
   color: #0e1e58;
   font-weight: 900;
@@ -178,8 +173,8 @@ form {
   background-color: #f7f8fa;
   border: 0.11rem solid rgba(0, 0, 0, 0.27);
   border-radius: 25px;
-  min-width: 700px;
-  max-width: 1000px;
+  /* min-width: 700px;
+  max-width: 1000px; */
   padding-bottom: 20px;
 }
 
@@ -223,6 +218,7 @@ form {
 }
 
 #table2 {
+  width: 100%;
   margin: auto;
   border-collapse: collapse;
   border: none;
@@ -244,6 +240,10 @@ th {
   font-weight: normal;
 }
 
+#advancedCalc {
+  padding: 0px 20px 0px 20px;
+}
+
 #advancedCalc th,
 #advancedCalc td {
   border-collapse: collapse;
@@ -260,7 +260,7 @@ tr {
 }
 
 tr:nth-child(7) {
-  border-bottom: 0.11rem solid rgba(0, 0, 0, 0.668);
+  border-bottom: 0.11rem solid rgba(0, 0, 0, 0.27);
 }
 
 #startComp,
