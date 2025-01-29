@@ -180,6 +180,7 @@ form {
   border-radius: 25px;
   min-width: 700px;
   max-width: 1000px;
+  padding-bottom: 20px;
 }
 
 /* #dashboard {
@@ -420,7 +421,7 @@ select {
   align-items: center; /* Vertically centers content */
   justify-content: center;
   gap: 3rem; /* Adds spacing between the elements */
-  padding: 25px 5px;
+  padding: 20px 11px 0px 10px;
 }
 
 #resultButtonsBasic {
