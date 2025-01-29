@@ -39,7 +39,6 @@ function toggleCalculatorState() {
     // advancedClearButton.classList.remove("hidden");
     // basicClearButton.classList.add("hidden");
 
-    title.innerText = "Abundance Calculator";
     document.querySelector("form").style.minWidth = "650px";
   }
   synchronizeValues();
