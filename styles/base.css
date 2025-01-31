@@ -460,3 +460,12 @@ select {
 #bookCoverAdvanced:hover {
   border: 6px solid #5a2b0c;
 }
+
+#YouTube {
+  font-size: 50px;
+  color: red;
+}
+
+#YouTube:hover {
+  color: #6c040b;
+}
