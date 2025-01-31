@@ -112,23 +112,38 @@
         </table>
         <table id="basicCalcChanges">
           <tr>
-            <td>Percentage Change in the Time Price</td>
+            <td class="tooltip">
+              <span class="tooltiptext">(End Year Time Price ÷ Start Year Time Price) <br> - 1</span>
+              Percentage Change in the Time Price
+            </td>
             <td id="timePricePercentageChangeBasic">---</td>
           </tr>
           <tr>
-            <td>Abundance Multiplier</td>
+            <td class="tooltip">
+              <span class="tooltiptext">Start Year Time Price ÷ End Year Time Price</span>
+              Abundance Multiplier
+            </td>
             <td id="basicMultiplier">---</td>
           </tr>
           <tr>
-            <td>Percentage Change in Abundance</td>
+            <td class="tooltip">
+              <span class="tooltiptext">(Start Year Time Price ÷ End Year Time Price) -1</span>
+              Percentage Change in Abundance
+            </td>
             <td id="percentageChangeAbundance">---</td>
           </tr>
           <tr>
-            <td>Compound Annual Growth Rate</td>
+            <td class="tooltip">
+              <span class="tooltiptext">End Year Multiplier raised to the power of (1 divided by Years) - 1</span>
+              Compound Annual Growth Rate
+            </td>
             <td id="basicGrowthRate">---</td>
           </tr>
           <tr>
-            <td>Years to Double Abundance</td>
+            <td class="tooltip">
+              <span class="tooltiptext">70 divided by Compound Annual Growth Rate</span>
+              Years to Double Abundance
+            </td>
             <td id="basicDoubleYears">---</td>
           </tr>
         </table>
