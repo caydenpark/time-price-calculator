@@ -233,6 +233,10 @@ function resetCustomWageDropDownBasic() {
 }
 
 function performBasicCaculations() {
+  if (allInputFieldsNotEmpty()){
+    finishSentence();
+  }
+
   // Year
   var startYearBasic = document.getElementById("startYearBasic").value;
   var endYearBasic = document.getElementById("endYearBasic").value;
