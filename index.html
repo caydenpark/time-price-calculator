@@ -47,7 +47,7 @@
                 Product
               </td>
               <td class="input" colspan="2">
-                <input type="text" id="productBasic" class="sticky-field" style="width:95%"/>
+                <input type="text" id="productBasic" class="sticky-field" style="width:95%" onkeyup="performBasicCaculations()"/>
               </td>
               <td></td>
             </tr>
@@ -224,7 +224,6 @@
                   <span class="tooltiptext">Sources: U.S. Measuringworth.com</span>
                   Hourly Compensation
                 </p>
-                <!-- <label for="dropDownWages">Hourly Compensation:</label> -->
                 <select name="dropDownWages" id="dropDownWages" onchange="getHourlyComp(); getHourlyCompBasic();">
                   <option value="Custom Wage">Custom Wage</option>
                   <option value="U.S. Blue Collar">U.S. Blue Collar</option>

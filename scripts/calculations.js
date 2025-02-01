@@ -44,8 +44,6 @@ function toggleCalculatorState() {
   synchronizeValues();
   performBasicCaculations();
   performCalculations();
-  // getHourlyCompBasic();
-  // getHourlyComp();
 }
 
 function synchronizeValues() {
@@ -259,12 +257,13 @@ function performBasicCaculations() {
     document.getElementById("endTimePriceBasic").innerHTML = endTimePriceBasic.toFixed(3);
 
     // Percentage Change in the Time Price
-    document.getElementById("timePricePercentageChangeBasic").innerHTML = timePricePercentageChangeBasic.toFixed(1)+"%";
-    document.getElementById("timePricePercentageChangeBasicSentence").innerHTML = timePricePercentageChangeBasic.toFixed(1)+"%";
-
+    document.getElementById("timePricePercentageChangeBasic").innerHTML = timePricePercentageChangeBasic.toFixed(2);
+    document.getElementById("timePricePercentageChangeBasicSentence").innerHTML = timePricePercentageChangeBasic.toFixed(2);
+    
     // Abundance Multiplier
     basicMultiplier = startTimePriceBasic / endTimePriceBasic;
     document.getElementById("basicMultiplier").innerHTML = basicMultiplier.toFixed(2);
+    document.getElementById("personalMultiplierBasic").innerHTML = basicMultiplier.toFixed(1)+"%";
     
     // Percentage Change in Abundance
     multiplierEnd = startTimePriceBasic / endTimePriceBasic;
@@ -439,6 +438,9 @@ function performCalculations() {
 }
 
 function finishSentence() {
+  document.getElementById("startYearSentenceBasic").innerHTML = startYearBasic;
+  document.getElementById("endYearSentenceBasic").innerHTML = endYearBasic;
+
   var productBasic = document.getElementById('productBasic').value;
   var startYearBasic = document.getElementById('startYearBasic').value;
   var endYearBasic = document.getElementById('endYearBasic').value;
@@ -459,6 +461,8 @@ function finishSentence() {
   document.getElementById("personalMultiplierBasic").innerHTML = multiplierBasic.toFixed(2);
   document.getElementById("personalMultiplierBasic").classList.add('boldBlue');
   document.getElementById("timePricePercentageChangeBasicSentence").style.fontWeight =  900;
+  document.getElementById("startYearSentenceBasic").style.fontWeight =  900;
+  document.getElementById("endYearSentenceBasic").style.fontWeight =  900;
 }
 
 function clearBasic() {
@@ -469,6 +473,8 @@ function clearBasic() {
   for (var i = 0; i < fields.length; i++) {
     fields[i].value = '';
   }
+
+  document.getElementById("dropDownWagesBasic").value = "Custom Wage";
 
   document.getElementById("startTimePriceBasic").innerHTML = "----";
   document.getElementById("endTimePriceBasic").innerHTML = "----";
@@ -483,6 +489,8 @@ function clearBasic() {
   document.getElementById('endTimePriceBasic').classList.remove('boldBlue');
   document.getElementById('personalMultiplierBasic').classList.remove('boldBlue');
   document.getElementById('timePricePercentageChangeBasicSentence').style.removeProperty('font-weight');
+  document.getElementById('startYearSentenceBasic').style.removeProperty('font-weight');
+  document.getElementById('endYearSentenceBasic').style.removeProperty('font-weight');
 
   document.getElementById("timePricePercentageChangeBasicSentence").innerHTML = "---";
   document.getElementById("timePricePercentageChangeBasic").innerHTML = "---";
