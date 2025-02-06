@@ -15,7 +15,7 @@ window.addEventListener("load", (event) => {
 const stickyFields = document.querySelectorAll('.sticky-field');
 
 function toggleCalculatorState() {
-  var title = document.getElementById("title");
+  // var title = document.getElementById("title");
   
   var basicRadio = document.getElementById("basic");
   var advancedRadio = document.getElementById("advanced");
@@ -31,7 +31,7 @@ function toggleCalculatorState() {
     // basicClearButton.classList.remove("hidden");
     // advancedClearButton.classList.add("hidden");
 
-    title.innerText = "Time Price Calculator";
+    // title.innerText = "Time Price Calculator";
     document.querySelector("form").style.width = "550px";
   } else if (advancedRadio.checked) {
     advancedCalc.classList.remove("hidden");

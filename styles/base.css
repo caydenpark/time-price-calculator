@@ -14,13 +14,23 @@ body {
   color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 3rem;
   border: none;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#title h1 {
+  font-size: 2rem;
+  margin: 3px;
+}
+
+#title h2 {
+  font-size: .8rem;
+  margin: 3px;
+  letter-spacing: 1px;
 }
 
 /* Calculator Toggle */
