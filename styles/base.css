@@ -559,7 +559,6 @@ select {
 
   #basicCalc td:first-child {
     width: 45%;
-    font-size: 13px;
   }
 
   /* Keep Start and End columns side by side but narrower */
@@ -568,6 +567,10 @@ select {
   #basicCalc td:nth-child(2),
   #basicCalc td:nth-child(3) {
     width: 22%;
+  }
+
+  #basicCalc input {
+    border: .08rem solid black;
   }
 
   /* Prevent Safari input field overflow */
@@ -610,7 +613,6 @@ select {
 
   #basicCalcChanges td:first-child {
     width: 70%;
-    font-size: 13px;
   }
 
   /* Stack result section vertically */
