@@ -507,8 +507,9 @@ select {
   /* Shrink form width uniformly */
   form {
     width: 100%;
-    max-width: 400px;
-    padding-bottom: 15px;
+    margin: 0 10px;
+    padding: 0 10px 15px;
+    box-sizing: border-box;
     border-radius: 15px;
   }
 
@@ -555,14 +556,11 @@ select {
   /* Shrink basic calculator section */
   #basicCalc {
     width: 100%;
-    padding: 0 10px;
   }
 
   /* Shrink the main basic calc table */
   #basicCalc > table:first-child {
     width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
   }
 
   /* Adjust basic calc table cells */
@@ -595,8 +593,8 @@ select {
 
   /* Shrink the changes table */
   #basicCalcChanges {
-    width: 100%;
-    max-width: 350px;
+    width: 90%;
+    /* max-width: 350px; */
     margin: 10px auto 0;
     font-size: 14px;
   }
@@ -649,7 +647,7 @@ select {
   /* Adjust dropdown selects for mobile */
   select {
     font-size: 12px;
-    max-width: 100%;
+    /* max-width: 100%; */
   }
 
   /* Adjust tooltip for mobile */

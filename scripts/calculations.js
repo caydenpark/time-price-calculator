@@ -32,7 +32,7 @@ function toggleCalculatorState() {
     // advancedClearButton.classList.add("hidden");
 
     // title.innerText = "Time Price Calculator";
-    document.querySelector("form").style.width = "550px";
+    // document.querySelector("form").style.width = "550px";
   } else if (advancedRadio.checked) {
     advancedCalc.classList.remove("hidden");
     basicCalc.classList.add("hidden");
