@@ -515,8 +515,6 @@ select {
 
   /* Adjust title for mobile */
   #title {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
   }
