@@ -579,8 +579,20 @@ select {
   #basicCalc th:nth-child(3),
   #basicCalc td:nth-child(2),
   #basicCalc td:nth-child(3) {
-    width: 25%;
+    width: 22%;
   }
+
+  /* Prevent Safari input field overflow */
+#basicCalc td.input {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#basicCalc input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
   /* Adjust input fields */
   #basicCalc input {
