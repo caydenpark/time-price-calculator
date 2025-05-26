@@ -594,6 +594,17 @@ select {
   box-sizing: border-box;
 }
 
+#advancedCalc td.input {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#advancedCalc input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
   /* Adjust input fields */
   #basicCalc input {
     width: 95%;
