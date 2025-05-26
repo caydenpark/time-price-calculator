@@ -479,3 +479,184 @@ select {
 #YouTube:hover {
   color: #6c040b;
 }
+
+/* Mobile Optimization - 480px and below - Only when Basic Calculator is active */
+@media screen and (max-width: 480px) {
+  /* Only apply mobile styles when basic calculator is visible (advanced is hidden) */
+  
+  /* Adjust main container padding for mobile - only when basic calc is active */
+  #basicCalc:not(.hidden) ~ * main,
+  main:has(#basicCalc:not(.hidden)) {
+    padding-top: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 1em;
+  }
+
+  /* Apply mobile styles only when basic calculator is active */
+  #advancedCalc.hidden ~ form,
+  form:has(#advancedCalc.hidden) {
+  /* Adjust main container padding for mobile */
+  main {
+    padding-top: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 1em;
+  }
+
+  /* Shrink form width uniformly */
+  form {
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+  }
+
+  /* Adjust title for mobile */
+  #title {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  #title h1 {
+    font-size: 1.8rem;
+  }
+
+  #title h2 {
+    font-size: 0.9rem;
+  }
+
+  /* Shrink toggle container */
+  #toggleContainer {
+    margin: 15px;
+  }
+
+  .toggle {
+    width: 160px;
+    height: 25px;
+  }
+
+  .toggleLabel {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .toggleSwitch {
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .toggleInputAdvanced:checked ~ .toggleSwitch {
+    left: 80px;
+  }
+
+  /* Shrink basic calculator section */
+  #basicCalc {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Shrink the main basic calc table */
+  #basicCalc > table:first-child {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  /* Adjust basic calc table cells */
+  #basicCalc th,
+  #basicCalc td {
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+  }
+
+  #basicCalc td:first-child {
+    width: 45%;
+    font-size: 13px;
+  }
+
+  /* Keep Start and End columns side by side but narrower */
+  #basicCalc th:nth-child(2),
+  #basicCalc th:nth-child(3),
+  #basicCalc td:nth-child(2),
+  #basicCalc td:nth-child(3) {
+    width: 25%;
+  }
+
+  /* Adjust input fields */
+  #basicCalc input {
+    width: 95%;
+    height: 22px;
+    font-size: 15px;
+  }
+
+  /* Shrink the changes table */
+  #basicCalcChanges {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto 0;
+    font-size: 14px;
+  }
+
+  #basicCalcChanges td:first-child {
+    width: 70%;
+    font-size: 13px;
+  }
+
+  /* Stack result section vertically */
+  #resultSection {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 15px 10px 0px 10px;
+  }
+
+  /* Sentence explanation adjustments */
+  #sentenceExplanation {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* Align buttons horizontally in mobile */
+  #resultButtonsBasic {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Adjust button sizes for mobile */
+  #resultButtonsBasic button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  #YouTube {
+    font-size: 35px;
+  }
+
+  /* Adjust book cover size */
+  #bookCoverBasic {
+    width: 80px;
+    border: 4px solid #e0bd53;
+  }
+
+  #bookCoverBasic:hover {
+    border: 4px solid #5a2b0c;
+  }
+
+  /* Adjust dropdown selects for mobile */
+  select {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  /* Adjust tooltip for mobile */
+  .tooltip .tooltiptext {
+    width: 200px;
+    margin-left: -50px;
+    font-size: 11px;
+  }
+  }
+}
