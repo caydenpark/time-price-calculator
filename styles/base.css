@@ -159,7 +159,7 @@ button:hover {
   justify-self: center;
   border: .10rem solid rgba(0, 0, 0, 0.27);
   border-radius: 2.5px;
-  width: 100%;
+  width: 90%;
   background-color: #ffffff;
   font-size: 16px;
 }
@@ -427,7 +427,7 @@ select {
   align-items: center; /* Vertically centers content */
   justify-content: center;
   gap: 3rem; /* Adds spacing between the elements */
-  padding: 20px 11px 0px 10px;
+  padding: 20px 30px 0px;
 }
 
 #resultButtonsBasic {
@@ -488,19 +488,8 @@ select {
   #basicCalc:not(.hidden) ~ * main,
   main:has(#basicCalc:not(.hidden)) {
     padding-top: 1em;
-    padding-left: 10px;
-    padding-right: 10px;
-    gap: 1em;
-  }
-
-  /* Apply mobile styles only when basic calculator is active */
-  #advancedCalc.hidden ~ form,
-  form:has(#advancedCalc.hidden) {
-  /* Adjust main container padding for mobile */
-  main {
-    padding-top: 1em;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
     gap: 1em;
   }
 
@@ -508,9 +497,8 @@ select {
   form {
     width: 100%;
     margin: 0 10px;
-    padding: 0 10px 15px;
     box-sizing: border-box;
-    border-radius: 15px;
+    border-radius: 25px;
   }
 
   /* Adjust title for mobile */
@@ -676,6 +664,5 @@ select {
     width: 200px;
     margin-left: -50px;
     font-size: 11px;
-  }
   }
 }
