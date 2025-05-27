@@ -3,6 +3,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-image: url('../images/background.jpg');
   background-size: cover;
   /* background-repeat: no-repeat; */
@@ -483,7 +484,10 @@ select {
 /* Mobile Optimization - 480px and below - Only when Basic Calculator is active */
 @media screen and (max-width: 480px) {
   /* Only apply mobile styles when basic calculator is visible (advanced is hidden) */
-  
+  body {
+  overflow-x: hidden;
+}
+
   /* Adjust main container padding for mobile - only when basic calc is active */
   #basicCalc:not(.hidden) ~ * main,
   main:has(#basicCalc:not(.hidden)) {
@@ -491,6 +495,7 @@ select {
     padding-left: 40px;
     padding-right: 40px;
     gap: 1em;
+    box-sizing: border-box;
   }
 
   /* Shrink form width uniformly */
@@ -570,19 +575,9 @@ select {
     width: 22%;
   }
 
-  #basicCalc input {
-    border: .08rem solid black;
-  }
-
   /* Prevent Safari input field overflow */
 #basicCalc td.input {
   min-width: 0;
-  box-sizing: border-box;
-}
-
-#basicCalc input {
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -599,9 +594,11 @@ select {
 
   /* Adjust input fields */
   #basicCalc input {
-    width: 95%;
+    width: 100%;
     height: 22px;
     font-size: 15px;
+    box-sizing: border-box;
+    border: .08rem solid black;
   }
 
   /* Shrink the changes table */
